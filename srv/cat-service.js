@@ -8,6 +8,7 @@ module.exports = async srv => { // called by server.js
     srv.before('READ', Books, async req => {
 
         console.log(req.http.req.headers)
+        console.log(req.headers) // <-- find header here, if called from function callBooksWithHeader
 
     })
 
